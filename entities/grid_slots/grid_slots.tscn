@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bc1d8uejl5soj"]
+
+[ext_resource type="Script" uid="uid://xl6xb4jxw8q8" path="res://entities/grid_slots/slot_manager.gd" id="1_qg3mg"]
+
+[node name="GridSlots" type="Node2D" unique_id=1072727924]
+script = ExtResource("1_qg3mg")

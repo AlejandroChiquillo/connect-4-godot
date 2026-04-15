@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dxhke2xfnvpyj"]
+
+[ext_resource type="Script" uid="uid://bfynn7f7me7ur" path="res://entities/main_game/ui.gd" id="2_jic1a"]
+[ext_resource type="PackedScene" uid="uid://bc1d8uejl5soj" path="res://entities/grid_slots/grid_slots.tscn" id="2_lq633"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lq633"]
+font_size = 64
+font_color = Color(0.93333334, 0.93333334, 0.93333334, 1)
+
+[node name="MainGame" type="Node2D" unique_id=1204676555]
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=850157327]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=274246478]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0627451, 0.07058824, 0.18431373, 1)
+
+[node name="GridSlots" parent="." unique_id=1072727924 instance=ExtResource("2_lq633")]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=965423427]
+
+[node name="Control" type="Control" parent="UI" unique_id=1309767503]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_jic1a")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/Control" unique_id=1556938956]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 32
+
+[node name="Timer" type="Label" parent="UI/Control/MarginContainer" unique_id=1043051561]
+unique_name_in_owner = true
+layout_mode = 2
+label_settings = SubResource("LabelSettings_lq633")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bkq8na2xn6vp5"]
+
+[ext_resource type="Script" uid="uid://1kutdg3bos58" path="res://entities/slot/slot.gd" id="1_bbkgj"]
+[ext_resource type="Texture2D" uid="uid://fq3wt4jijuw7" path="res://entities/slot/slot_sprite.png" id="1_uv42o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bbkgj"]
+radius = 35.0
+
+[node name="Slot" type="Node2D" unique_id=1078545289]
+script = ExtResource("1_bbkgj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2005446725]
+texture = ExtResource("1_uv42o")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=681299974]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1198896863]
+shape = SubResource("CircleShape2D_bbkgj")
